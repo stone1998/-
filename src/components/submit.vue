@@ -84,8 +84,9 @@ export default {
     submitForm() {
       this.$refs['ruleForm'].validate(valid => {
         if (valid) {
+          window.sessionStorage.setItem("wode","123123")
           this.$message.success("登录成功")
-          this.$router.push("/home")
+          this.$router.push("/index")
         } else {
           this.$message.error("登录失败")
         }
