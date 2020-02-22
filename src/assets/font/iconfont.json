@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "216741",
+      "name": "pwd",
+      "font_class": "pwd",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "254377",
+      "name": "pwd",
+      "font_class": "dengluzhucemima",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "1175005",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e677",
+      "unicode_decimal": 58999
+    },
+    {
+      "icon_id": "13075005",
+      "name": "user",
+      "font_class": "user1",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    }
+  ]
+}
