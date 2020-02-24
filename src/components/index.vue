@@ -19,6 +19,7 @@
       :collapse="iscoll"
       text-color="#fff"
       unique-opened
+      router
       :collapse-transition="false"
       active-text-color="#ffd04b">
       <el-submenu v-for="(item,index) in 3" :index="index+''" :key="3+index">
@@ -28,7 +29,7 @@
         </template>
         <el-menu-item-group>
           <template slot="title">分组一</template>
-          <el-menu-item index="1-1">选项1</el-menu-item>
+          <el-menu-item :index="'/bar'+(index+1)">选项1</el-menu-item>
           <el-menu-item index="1-2">选项2</el-menu-item>
         </el-menu-item-group>
         <el-menu-item-group title="分组2">
@@ -46,7 +47,9 @@
 
         </el-aside>
         <!-- 主体区域 -->
-        <el-main class="main">Main</el-main>
+        <el-main class="main">
+            <router-view></router-view>
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -69,6 +72,9 @@ export default {
             // console.log(thi)
             this.$refs.slid.width=(this.$refs.slid.width=="5%")?"25%":"5%"
         }
+    },
+    mounted() {
+        console.log(this.$router)
     },
 };
 </script>

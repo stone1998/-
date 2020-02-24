@@ -1,6 +1,9 @@
 import vuerouter from "vue-router"
 import submit from "./submit.vue"
 import index from "./index.vue"
+import hellow from "./hellow.vue"
+import bar1 from "./bar1.vue"
+import bar2 from "./bar2.vue"
 const router = new vuerouter({
         routes: [{
                 path: "/",
@@ -11,7 +14,21 @@ const router = new vuerouter({
                 component: submit
             }, {
                 path: "/index",
-                component: index
+                redirect: "/hellow",
+                component: index,
+                children: [{
+                        path: "/hellow",
+                        component: hellow
+                    },
+                    {
+                        path: "/bar1",
+                        component: bar1
+                    },
+                    {
+                        path: "/bar2",
+                        component: bar2
+                    }
+                ]
             }
         ]
     })
